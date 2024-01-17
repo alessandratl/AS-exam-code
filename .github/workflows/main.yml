@@ -20,5 +20,5 @@ jobs:
         uses: cloudposse/github-action-docker-compose-test-run@main
         with:
           context: .
-          file: Compose
+          file: docker-compose.yml
           push: false
