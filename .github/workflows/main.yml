@@ -1,0 +1,24 @@
+name: ej1-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  examen:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: descargar codigo
+        uses: actions/checkout@v4
+      - name: Ejecutar primer comando
+        run: npm i
+      - name: Ejecutar segundo comando
+        run: npm test
+      - name: Accion indicada
+        uses: cloudposse/github-action-docker-compose-test-run@main
+        with:
+          context: .
+          file: Compose
+          push: false
