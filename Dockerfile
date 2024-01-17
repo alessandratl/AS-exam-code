@@ -7,5 +7,5 @@ WORKDIR trabajo/app
 COPY . /app
 
 #Ejecutar comando 
-RUN npm install
+RUN pip npm install
 
